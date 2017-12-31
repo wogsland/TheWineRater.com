@@ -11,6 +11,11 @@ To run the app locally
     npm install
     npm start
 
+or using Docker
+
+    docker image build -t react:app .
+    docker container run -it -p 3000:3000 react:app
+
 and you'll find the app running [here](http://localhost:3000/).
 
 Licensing
