@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import './Footer.css'
+import './Footer.css';
 
 class Footer extends Component {
   copyrightYears = () => {
-    console.log(this.props.lastChange)
     if (typeof this.props.lastChange === 'undefined') {
       return 2018
     } else if (this.props.lastChange === this.props.firstChange) {
       return this.props.lastChange;
-    } else {
-      return this.props.firstChange+' - '+this.props.lastChange;
     }
+    return this.props.firstChange+' - '+this.props.lastChange;
   }
 
   render() {

@@ -23,18 +23,18 @@ const appellation = {
       name: 'Messerschmidt',
     },
   ],
-}
+};
 
 function getAppellationID() {
   const urlPieces = window.location.href.split('/');
-  return urlPieces[urlPieces.findIndex((el) => {return el === 'appellation';})+1];
+  return urlPieces[urlPieces.findIndex((el) => { return el === 'appellation'; }) + 1];
 }
 
 class Appellation extends Component {
   renderWineries = () => {
     appellation.wineries.sort((a, b) => {
       return a.name > b.name;
-    })
+    });
     return (
       <div className="Appellation-wineries">
         {appellation.wineries.map((winery, i) => {

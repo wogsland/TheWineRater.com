@@ -7,46 +7,46 @@ const wine = {
   alcohol: 11.0,
   appellation: {
     id: 1337,
-    name: "Rheingau",
+    name: 'Rheingau',
     superAppellations: [
       {
         id: 13,
-        name: "Europe",
+        name: 'Europe',
       },
       {
         id: 1,
-        name: "Deutschland",
+        name: 'Deutschland',
       },
       {
         id: 133,
-        name: "Hessen",
+        name: 'Hessen',
       },
     ],
   },
-  created: "2017",
+  created: '2017',
   grapes: [
     {
       id: 22,
       name: 'Spätburgunder',
-    }
+    },
   ],
-  modified: "2017",
-  name: "2015 Spätburgunder Rosé Rheingau",
+  modified: '2017',
+  name: '2015 Spätburgunder Rosé Rheingau',
   tastings: [
     {
       stars: 0,
-      ratingText: "This wine didn't exist yet.",
+      ratingText: 'This wine didn\'t exist yet.',
       year: 2013,
     },
     {
       stars: 3,
-      ratingText: "This wine has a light, rosé coloration and a muted bouquet. The flavor has a surprisingly tart finish after a somewhat puckering, yet refreshing flavor.",
+      ratingText: 'This wine has a light, rosé coloration and a muted bouquet. The flavor has a surprisingly tart finish after a somewhat puckering, yet refreshing flavor.',
       year: 2017,
     },
   ],
   winery: {
     id: 1,
-    name: "Georg Breuer",
+    name: 'Georg Breuer',
   },
   year: 2015,
 };
@@ -86,17 +86,18 @@ class Wine extends Component {
               </div>
               <p className="Wine-rating-text">{tasting.ratingText}</p>
             </div>
-          ); })
+          );
+        })
         }
       </div>
     );
   }
 
   renderStars = (starCount) => {
-    let stars = [];
+    const stars = [];
 
-    for (let i=0; i<starCount; i++) {
-      stars.push(<img src={logo} className="App-logo" alt="logo" key={i}/>);
+    for (let i = 0; i < starCount; i++) {
+      stars.push(<img src={logo} className="App-logo" alt="logo" key={i} />);
     }
 
     return (

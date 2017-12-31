@@ -22,17 +22,15 @@ class Breadcrumbs extends Component {
           {thisAppellation}
         </font>
       );
-    } else {
-      return '';
     }
+    return '';
   }
 
   grape = () => {
     if (typeof this.props.grape !== 'undefined') {
       return this.props.grape.name;
-    } else {
-      return '';
     }
+    return '';
   }
 
   winery = () => {
@@ -45,9 +43,8 @@ class Breadcrumbs extends Component {
       );
     } else if (typeof this.props.winery !== 'undefined'){
       return this.props.winery.name;
-    } else {
-      return '';
     }
+    return '';
   }
 
   render() {
@@ -58,10 +55,10 @@ class Breadcrumbs extends Component {
         </font>
         {
           typeof this.props.grape !== 'undefined' ?
-          <font className="Breadcrumb-link">
-            <a href="/grapes">Grapes</a> >
-          </font>
-          : ''
+            <font className="Breadcrumb-link">
+              <a href="/grapes">Grapes</a> >
+            </font>
+            : ''
         }
         {this.appellations()}
         {this.grape()}
