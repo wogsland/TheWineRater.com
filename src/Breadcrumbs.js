@@ -4,11 +4,17 @@ import './Breadcrumbs.css';
 class Breadcrumbs extends Component {
   winery = () => {
     const wineryLink = '/winery/'+this.props.winery.id;
-    return (
-      <font className="Breadcrumb-link">
-        <a href={wineryLink}>{this.props.winery.name}</a> >
-      </font>
-    );
+    if (typeof this.props.wineName !== 'undefined') {
+      return (
+        <font className="Breadcrumb-link">
+          <a href={wineryLink}>{this.props.winery.name}</a> >
+        </font>
+      );
+    } else if (typeof this.props.winery !== 'undefined'){
+      return this.props.winery.name;
+    } else {
+      return '';
+    }
   }
 
   appellations = () => {
@@ -38,7 +44,7 @@ class Breadcrumbs extends Component {
         </font>
         {this.appellations()}
         {this.winery()}
-        {this.props.wineName}
+        {typeof this.props.wineName !== 'undefined' ? this.props.wineName : ''}
       </div>
     );
   }

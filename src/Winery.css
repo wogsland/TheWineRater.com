@@ -1,25 +1,26 @@
-.Wine {
+.Winery {
   text-align: left;
+  padding-bottom: 50px;
 }
 
-.Wine-name {
+.Winery-name {
   text-align: center;
   font-size: 30px;
 }
 
-.Wine-winery-name {
+.Winery-location {
   text-align: center;
-  font-size: 25px;
+  font-size: 18px;
   font-style: italic;
 }
 
-.Wine-rating {
+.Winery-description {
   text-align: left;
   padding-left: 20px;
 }
 
-.Wine-rating-text {
+.Winery-vintages {
   text-align: left;
   padding-left: 20px;
-  font-style: italic;
+  padding-top: 30px;
 }

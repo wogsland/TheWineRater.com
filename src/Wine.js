@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Breadcrumbs from './Breadcrumbs';
-import Footer from './Footer';
 import logo from './logo.svg';
 import './Wine.css';
 
@@ -42,6 +41,7 @@ const wine = {
     id: 1,
     name: "Georg Breuer",
   },
+  year: 2015,
 };
 
 function getWineID() {
@@ -93,16 +93,12 @@ class Wine extends Component {
         <h1 className="Wine-name">
           {wine.name}
         </h1>
-        <h1 className="Winery-name">
+        <h1 className="Wine-winery-name">
           {wine.winery.name}
         </h1>
         <div className="Wine-rating">
           {this.renderRatings()}
         </div>
-        <Footer
-          firstChange={wine.created}
-          lastChange={wine.modified}
-        />
       </div>
     );
   }
