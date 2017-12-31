@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import Footer from './Footer';
+import Appellation from './Appellation';
 import Header from './Header';
 import HomePage from './HomePage';
 import Wine from './Wine';
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Header />
       <Route exact path="/" component={HomePage}/>
       <Route path="/" component={App}/>
+      <Route path="/Appellation" component={Appellation}/>
       <Route path="/wine" component={Wine}/>
       <Route path="/winery" component={Winery}/>
       <Footer />

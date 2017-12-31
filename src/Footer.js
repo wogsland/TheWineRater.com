@@ -19,7 +19,11 @@ class Footer extends Component {
         <hr />
         <p className="copyright">&copy; Copyright {this.copyrightYears()} TheWineRater.com</p>
         <p className="copyright">
-          Checkout the <a href="https://github.com/wogsland/TheWineRater.com" target="_blank">code</a> on Github.
+          Checkout the <a
+            href="https://github.com/wogsland/TheWineRater.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >code</a> on Github.
         </p>
       </div>
     );
