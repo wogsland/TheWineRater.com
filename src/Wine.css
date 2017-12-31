@@ -16,5 +16,10 @@
 .Wine-rating {
   text-align: left;
   padding-left: 20px;
+}
+
+.Wine-rating-text {
+  text-align: left;
+  padding-left: 20px;
   font-style: italic;
 }

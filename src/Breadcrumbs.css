@@ -3,3 +3,7 @@
   padding-top: 20px;
   text-align: left;
 }
+
+.Breadcrumb-link {
+  padding-right: 5px;
+}
