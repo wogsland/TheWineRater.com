@@ -1,0 +1,26 @@
+.Appellation {
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+.Appellation-name {
+  text-align: center;
+  font-size: 30px;
+}
+
+.Appellation-location {
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.Appellation-description {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.Appellation-wineries {
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 30px;
+}
