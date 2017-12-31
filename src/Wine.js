@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './Wine.css';
 
 const wine = {
+  alcohol: 11.0,
   appellation: {
     id: 1337,
     name: "Rheingau",
@@ -23,6 +24,12 @@ const wine = {
     ],
   },
   created: "2017",
+  grapes: [
+    {
+      id: 22,
+      name: 'Spätburgunder',
+    }
+  ],
   modified: "2017",
   name: "2015 Spätburgunder Rosé Rheingau",
   tastings: [
@@ -50,6 +57,23 @@ function getWineID() {
 }
 
 class Wine extends Component {
+  renderGrapes = () => {
+    return (
+      <div>
+        Grapes:{' '}
+        {wine.grapes.map((grape, i) => {
+          const grapeLink = '/grape/'+grape.id;
+          return (
+            <font>
+              <a href={grapeLink} key={i}>{grape.name}</a>
+              {i < wine.grapes.length - 1 ? ', ' : ''}
+            </font>
+          );
+        })}
+      </div>
+    );
+  }
+
   renderRatings = () => {
     return (
       <div>
@@ -96,6 +120,10 @@ class Wine extends Component {
         <h1 className="Wine-winery-name">
           {wine.winery.name}
         </h1>
+        <div className="Wine-details">
+          {this.renderGrapes()}
+          Alcohol: {wine.alcohol}%<br />
+        </div>
         <div className="Wine-rating">
           {this.renderRatings()}
         </div>

@@ -1,0 +1,26 @@
+.Grape {
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+.Grape-name {
+  text-align: center;
+  font-size: 30px;
+}
+
+.Grape-description {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.Grape-vintages {
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+.Grape-wineries {
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 30px;
+}
