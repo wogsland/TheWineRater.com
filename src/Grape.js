@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Breadcrumbs from './Breadcrumbs';
 import './Grape.css';
+import grapes from './data/grapes.js';
+
+console.log(grapes)
 
 const grape = {
   description: 'Spätburgunder is nummers!',
